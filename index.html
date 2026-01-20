@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Validate Win Logo</title>
 
-  <!-- Manrope font -->
+  <!-- Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,11 +29,10 @@
     }
 
     #container {
-  display: flex;
-  align-items: center;
-  gap: 44px; /* 👈 más aire */
-}
-
+      display: flex;
+      align-items: center;
+      gap: 44px;
+    }
 
     #logoWrapper {
       position: relative;
@@ -41,24 +40,22 @@
       height: 220px;
     }
 
+    /* Esferas animadas más pequeñas */
     #orange, #yellow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 170px;   /* 👈 más pequeño */
-  height: 170px;  /* 👈 más pequeño */
-}
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 170px;
+      height: 170px;
+    }
 
-#finalLogo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-}
-
-
+    /* Logo final más grande */
     #finalLogo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
       opacity: 0;
       transform: scale(0.95);
     }
@@ -110,7 +107,7 @@
 
     const tl = gsap.timeline();
 
-    const offset = 80;
+    const offset = 75;
 
     tl.set([orange, yellow], { x: 0, y: 0 });
 
@@ -119,9 +116,9 @@
       motionPath: {
         path: [
           {x: 0, y: 0},
-          {x: 70, y: -45},
-          {x: 110, y: 0},
-          {x: 70, y: 45},
+          {x: 65, y: -40},
+          {x: 100, y: 0},
+          {x: 65, y: 40},
           {x: -offset, y: 0}
         ],
         curviness: 1.5
@@ -134,9 +131,9 @@
       motionPath: {
         path: [
           {x: 0, y: 0},
-          {x: -70, y: 45},
-          {x: -110, y: 0},
-          {x: -70, y: -45},
+          {x: -65, y: 40},
+          {x: -100, y: 0},
+          {x: -65, y: -40},
           {x: offset, y: 0}
         ],
         curviness: 1.5
