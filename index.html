@@ -36,16 +36,16 @@
 
     #logoWrapper {
       position: relative;
-      width: 260px;
-      height: 260px;
+      width: 220px;
+      height: 220px;
     }
 
     svg {
       position: absolute;
       top: 0;
       left: 0;
-      width: 245px;
-      height: 245px;
+      width: 200px;   /* 👈 MÁS PEQUEÑO */
+      height: 200px;  /* 👈 MÁS PEQUEÑO */
     }
 
     #finalLogo {
@@ -55,7 +55,7 @@
 
     #wordmark {
       font-family: "Manrope", sans-serif;
-      font-size: 70px;   /* 👈 MITAD DE TAMAÑO */
+      font-size: 70px;
       font-weight: 600;
       color: #0A4F6E;
       line-height: 1;
@@ -100,7 +100,7 @@
 
     const tl = gsap.timeline();
 
-    const offset = 90;
+    const offset = 80;
 
     tl.set([orange, yellow], { x: 0, y: 0 });
 
@@ -109,9 +109,9 @@
       motionPath: {
         path: [
           {x: 0, y: 0},
-          {x: 80, y: -50},
-          {x: 120, y: 0},
-          {x: 80, y: 50},
+          {x: 70, y: -45},
+          {x: 110, y: 0},
+          {x: 70, y: 45},
           {x: -offset, y: 0}
         ],
         curviness: 1.5
@@ -124,9 +124,9 @@
       motionPath: {
         path: [
           {x: 0, y: 0},
-          {x: -80, y: 50},
-          {x: -120, y: 0},
-          {x: -80, y: -50},
+          {x: -70, y: 45},
+          {x: -110, y: 0},
+          {x: -70, y: -45},
           {x: offset, y: 0}
         ],
         curviness: 1.5
